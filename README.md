@@ -32,9 +32,9 @@ _G.plugin
 
 Plugins will load automatically on startup.
 
-If you make any changes to either plugin ModuleScripts _or_ ModuleScripts used by the plugins, you can reload them with the hotkey of `Ctrl+Shift+L` on Windows.
-
-TODO: Unsure what the hotkey is on MacOS
+If you make any changes to either plugin ModuleScripts _or_ ModuleScripts used by the plugins, you can reload them with the hotkey:
+- Windows: `Ctrl+Shift+L`
+- MacOS: `⇧⌘L`
 
 ## Caveats
 
