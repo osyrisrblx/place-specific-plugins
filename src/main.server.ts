@@ -1,3 +1,5 @@
+export {};
+
 const ServerStorage = game.GetService("ServerStorage");
 
 declare global {
