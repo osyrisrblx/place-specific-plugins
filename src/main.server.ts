@@ -1,5 +1,6 @@
 export {};
 
+const RunService = game.GetService("RunService");
 const ServerStorage = game.GetService("ServerStorage");
 
 declare global {
@@ -8,10 +9,12 @@ declare global {
 	}
 }
 
-_G.plugin = plugin;
+if (RunService.IsEdit() || RunService.IsServer()) {
+	_G.plugin = plugin;
 
-for (const descendant of ServerStorage.WaitForChild("plugins").GetDescendants()) {
-	if (descendant.IsA("ModuleScript")) {
-		require(descendant);
+	for (const descendant of ServerStorage.WaitForChild("plugins").GetDescendants()) {
+		if (descendant.IsA("ModuleScript")) {
+			require(descendant);
+		}
 	}
 }
