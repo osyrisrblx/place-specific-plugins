@@ -1,5 +1,5 @@
 {
-	"name": "place-plugin-loader",
+	"name": "place-specific-plugins",
 	"globIgnorePaths": [
 		"**/package.json",
 		"**/tsconfig.json"
