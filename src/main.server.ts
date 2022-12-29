@@ -12,7 +12,7 @@ declare global {
 if (RunService.IsEdit() || RunService.IsServer()) {
 	_G.plugin = plugin;
 
-	for (const descendant of ServerStorage.WaitForChild("plugins").GetDescendants()) {
+	for (const descendant of ServerStorage.WaitForChild("plugins", math.huge)!.GetDescendants()) {
 		if (descendant.IsA("ModuleScript")) {
 			require(descendant);
 		}
